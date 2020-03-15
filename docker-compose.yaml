@@ -2,4 +2,4 @@ version: "3.7"
 services:
     lbnginx:
         build: .
-        image: lbnginx
+        image: ${imgName} 
