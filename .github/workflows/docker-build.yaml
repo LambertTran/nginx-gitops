@@ -12,5 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build Img
       run: |
+        echo "${{ secrets.my_docker_login}}" | docker login -u "alirom93" --password-stdin
         docker-compose build
+        docker-compose push
       
