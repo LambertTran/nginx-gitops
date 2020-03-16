@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: nginx-gitops-deployment
+  namespace: dev
+  labels:
+    role: frontend
+
+spec:
+  selector:
+    matchLabels:
+      pod: frontend
+
+  replicas: 1
+  template:
+    metadata:
+      name: nginx-gitops-pod
+      labels:
+        pod: frontend
+
+    spec:
+      nodeSelector:
+        role: worker
+
+      containers:
+      - name: nginx-gitops
+        image: alirom93/lb-gitops:nginx-1.0.0
+        imagePullPolicy: Always 
+        resources:
+          limits:
+            cpu: "200m"
+          requests:
+            cpu: "100m"
+      imagePullSecrets:
+      - name: regcred
+
