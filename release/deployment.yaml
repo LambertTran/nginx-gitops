@@ -35,3 +35,22 @@ spec:
       imagePullSecrets:
       - name: regcred
 
+---
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: nginx-service
+  namespace: dev
+  labels:
+    role: frontend-service
+
+spec:
+  type: ClusterIP 
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+
+  selector:
+    pod: frontend
