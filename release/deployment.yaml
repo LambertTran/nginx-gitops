@@ -18,7 +18,7 @@ spec:
       name: nginx-gitops-pod
       labels:
         pod: frontend
-        
+    spec:    
       containers:
       - name: nginx-gitops
         image: alirom93/lb-gitops:nginx-1.0.0
