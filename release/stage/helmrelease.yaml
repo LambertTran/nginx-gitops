@@ -1,0 +1,17 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: nginx-gitops-dev
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:nginx-*
+spec:
+  releaseName: nginx-gitops-stage
+  chart:
+    git: git@github.com:LambertTran/nginx-gitops.git
+    path: charts/nginx
+    ref: master
+  values:
+    image: alirom93/lb-gitops:nginx-1.0.1
+    replicaCount: 1
