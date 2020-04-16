@@ -1,3 +1,4 @@
+---
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
@@ -13,5 +14,5 @@ spec:
     path: charts/nginx
     ref: master
   values:
-    image: alirom93/lb-gitops:nginx-1.0.0
+    image: alirom93/lb-gitops:nginx-1.0.1
     replicaCount: 1
