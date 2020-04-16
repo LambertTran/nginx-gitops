@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: {{ .Values.name }}-deployment
+  namespace: dev
+  labels:
+    role: frontend
+
+spec:
+  selector:
+    matchLabels:
+      pod: frontend
+
+  replicas: 1
+  template:
+    metadata:
+      name: {{ .Values.name }}-pod
+      labels:
+        pod: frontend
+
+    spec:
+      containers:
+      - name: {{ .Values.name }}
+        image: {{ .Values.img }}
+        imagePullPolicy: {{ .Values.pullPolicy }}
+        resources:
+          limits:
+            cpu: "200m"
+          requests:
+            cpu: "100m"
+      imagePullSecrets:
+      - name: regcred
