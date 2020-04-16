@@ -1,8 +1,8 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: nginx-gitops-dev
-  namespace: dev
+  name: nginx-gitops-stage
+  namespace: stage
   annotations:
     fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: glob:nginx-*
