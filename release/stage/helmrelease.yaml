@@ -14,4 +14,5 @@ spec:
     ref: master
   values:
     image: alirom93/lb-gitops:nginx-1.0.1
+    namespace: stage
     replicaCount: 1
