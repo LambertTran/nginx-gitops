@@ -15,4 +15,4 @@ spec:
     ref: master
   values:
     image: alirom93/lb-gitops:nginx-1.0.1
-    replicaCount: 2
+    replicaCount: 3
