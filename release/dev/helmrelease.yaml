@@ -14,5 +14,6 @@ spec:
     path: charts/nginx
     ref: master
   values:
-    image: alirom93/lb-gitops:nginx-1.0.1
+    #image: alirom93/lb-gitops:nginx-1.0.1
+    image: nginx
     replicaCount: 1
