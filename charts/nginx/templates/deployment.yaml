@@ -12,7 +12,7 @@ spec:
     matchLabels:
       pod: frontend
 
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       name: {{ .Values.name }}-pod
