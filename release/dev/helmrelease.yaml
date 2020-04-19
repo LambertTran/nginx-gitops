@@ -16,4 +16,4 @@ spec:
   values:
     #image: alirom93/lb-gitops:nginx-1.0.1
     image: nginx
-    replicaCount: 1
+    replicaCount: 2
