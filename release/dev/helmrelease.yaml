@@ -15,5 +15,5 @@ spec:
     ref: master
   values:
     #image: alirom93/lb-gitops:nginx-1.0.1
-    image: nginx
+    img: nginx
     replicaCount: 3
