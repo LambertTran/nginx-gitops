@@ -1,6 +1,6 @@
-name: nginx-gitops
+name: my-nginx
 namespace: dev
 #img: 604150070018.dkr.ecr.us-west-2.amazonaws.com/lb-dev/nginx:latest
 #img: alirom93/lb-gitops:nginx-1.0.0
-img: alirom93/lb-gitops:nginx-1.0.0
+img: alirom93/lb-gitops:nginx-1.0.2
 pullPolicy: Always

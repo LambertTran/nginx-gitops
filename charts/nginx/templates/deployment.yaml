@@ -24,6 +24,8 @@ spec:
       - name: {{ .Values.name }}
         image: {{ .Values.img }}
         imagePullPolicy: {{ .Values.pullPolicy }}
+        stdin: true
+        tty: true
         resources:
           limits:
             cpu: "200m"

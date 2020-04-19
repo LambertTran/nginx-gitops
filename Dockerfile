@@ -107,6 +107,7 @@ RUN wget https://releases.hashicorp.com/consul-template/0.24.1/consul-template_0
     mv consul-template /usr/local/bin
 
 COPY my-nginx.sh /usr/local/bin
+COPY wrapper.sh /usr/local/bin
 
 COPY index.tpl /
 
